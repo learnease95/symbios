@@ -1,0 +1,140 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.18);
+}
+
+.contact_container {
+  background-color: blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 32px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contact_link {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10pt;
+}
+
+.icon {
+  font-size: 14pt;
+}
+
+.navigation_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 10pt;
+}
+
+.nav_link_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: gray;
+}
+
+.menu_icon_container {
+  display: none;
+}
+
+.open_menu {
+  display: none;
+}
+
+.close_menu {
+  display: none;
+}
+
+@media only screen and (max-width: 1046px) {
+  .navigation_container {
+    justify-content: space-between;
+  }
+
+  .nav_link_container {
+    display: none;
+  }
+
+  .menu_icon_container {
+    display: flex;
+    cursor: pointer;
+    font-size: 14pt;
+  }
+
+  .open_menu {
+    display: flex;
+    flex-direction: column;
+    padding: 4px 32px;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background-color: #252525;
+    width: 100%;
+    z-index: 10;
+    animation: slideOpenMenuAnimation 1s ease-in-out forwards;
+  }
+
+  .close_menu {
+    display: flex;
+    flex-direction: column;
+    padding: 4px 32px;
+    position: absolute;
+    top: -1000%;
+    left: 0px;
+    background-color: #252525;
+    transition: ease-in-out 1s;
+    width: 100%;
+    z-index: 10;
+    animation: slideCloseMenuAnimation 1s ease-in-out backwards;
+  }
+
+  .nav_link {
+    padding: 16px 0px;
+    border-bottom: 1px dotted gray;
+  }
+
+  .nav_link:last-child {
+    border: none;
+  }
+}
+
+@keyframes slideOpenMenuAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideCloseMenuAnimation {
+  from {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
