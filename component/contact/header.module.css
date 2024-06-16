@@ -220,12 +220,12 @@
   .open_menu {
     display: flex;
     flex-direction: column;
-    padding: 4px 32px;
     position: absolute;
     top: 100%;
-    left: 0px;
+    right: 0;
+    left: 0;
+    padding: 8px 32px;
     background-color: #252525;
-    width: 100%;
     z-index: 10;
     animation: slideOpenMenuAnimation 1s ease-in-out forwards;
   }
@@ -233,10 +233,11 @@
   .close_menu {
     display: flex;
     flex-direction: column;
-    padding: 4px 32px;
     position: absolute;
     top: -1000%;
-    left: 0px;
+    right: 0;
+    left: 0;
+    padding: 8px 32px;
     background-color: #252525;
     transition: ease-in-out 1s;
     width: 100%;
