@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
+
   position: sticky;
   top: 0;
   left: 0;
@@ -40,7 +41,6 @@
   flex-wrap: wrap;
   font-size: 10pt;
   position: relative;
-  height: 100%;
 }
 
 .nav_link_container {
